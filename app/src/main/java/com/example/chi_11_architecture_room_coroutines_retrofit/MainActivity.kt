@@ -5,7 +5,11 @@ import android.os.Bundle
 import com.example.chi_11_architecture_room_coroutines_retrofit.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
+
+    companion object {
+        const val TAG = "ttt"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

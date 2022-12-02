@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.chi_11_architecture_room_coroutines_retrofit">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:name=".app.PhotosApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"

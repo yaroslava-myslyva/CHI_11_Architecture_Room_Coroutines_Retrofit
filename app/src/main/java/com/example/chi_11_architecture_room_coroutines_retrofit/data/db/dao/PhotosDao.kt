@@ -1,24 +1,24 @@
 package com.example.chi_11_architecture_room_coroutines_retrofit.data.db.dao
 
-import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.chi_11_architecture_room_coroutines_retrofit.data.db.model.AnimalEntity
+import com.example.chi_11_architecture_room_coroutines_retrofit.data.db.model.PhotoEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface AnimalsDao {
+interface PhotosDao {
+
     /**
      * Method for adding one animal
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun addAnimal(animal :AnimalEntity)
+    suspend fun addPhoto(animal :PhotoEntity)
 
     /**
      * Method for getting all animals
      */
-    @Query("SELECT * FROM animalEntity")
-    suspend fun fetchAnimals(): Flow<List<AnimalEntity>>
+    @Query("SELECT * FROM photoEntity")
+    fun fetchPhotos(): Flow<List<PhotoEntity>>
 }
